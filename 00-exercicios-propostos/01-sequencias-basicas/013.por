@@ -2,19 +2,27 @@ programa
 {
 	
 	funcao inicio()
-	{
+	{	
 		real sal, aum, novo
+
+		faca{
+			escreva("Salário do Funcionário: ")
+			leia(sal)
+			limpa()
+			se(sal <= 0){
+				escreva("Dados INVÁLIDOS!!!\n")
+			}
+		} enquanto (sal <= 0)
 		
-		escreva("Salário do(a) funcionário(a): ")
-		leia(sal)
-		limpa()
+
 		aum = 15/100.0 * sal
 		novo = sal + aum
-		escreva("PROMOÇÃO DO(A) FUNCIONÁRIO(A)\n")
+
+		escreva("FUNCIONÁRIO(A) PROMOVIDO(A)\n")
 		escreva("=============================\n")
 		escreva("Salário Original: R$", sal, "\n")
 		escreva("Valor do Aumento: R$", aum, "\n")
-		escreva("Novo Salário: R$", novo, "\n") 
+		escreva("Novo Valor: R$", novo, "\n")
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -22,7 +30,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 145; 
+ * @POSICAO-CURSOR = 183; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

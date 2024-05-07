@@ -3,29 +3,26 @@ programa
 	
 	funcao inicio()
 	{
-		real n1, n2, m
-		faca{
-			escreva("Nota 1: ")
-			leia(n1)
-			limpa()
-			se(n1 < 0){
-				escreva("Dados INVÁLIDOS!!!\n")
-			}
-		} enquanto (n1 < 0)
+		inteiro dias
+		real vD, sal
 
 		faca{
-			escreva("Nota 2: ")
-			leia(n2)
+			escreva("Número de dias trabalhados: ")
+			leia(dias)
 			limpa()
-			se(n2 < 0){
+			se(dias <= 0 ou dias > 31){
 				escreva("Dados INVÁLIDOS!!!\n")
 			}
-		} enquanto (n2 < 0)
+		} enquanto(dias <= 0 ou dias > 31)
 		
-		m = (n1 + n2) / 2.0
-		escreva("CÁLCULO DA MÉDIA\n")
-		escreva("================\n")
-		escreva("Média: ", m, "\n")
+		vD = 8 * 25
+		sal = vD * dias
+
+		escreva("MOSTRANDO O SALÁRIO\n")
+		escreva("============================\n")
+		escreva("Dias Trabalhados: ", dias, "\n")
+		escreva("Valor pelo dia: R$", vD, "\n")
+		escreva("Salário: R$ = ", sal, "\n")
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -33,7 +30,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 290; 
+ * @POSICAO-CURSOR = 301; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

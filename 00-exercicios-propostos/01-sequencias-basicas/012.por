@@ -4,16 +4,25 @@ programa
 	funcao inicio()
 	{
 		real preco, desc, novo
-		escreva("Qual é o preço do produto? ")
-		leia(preco)
-		limpa()
+
+		faca{
+			escreva("Preço do Produto: ")
+			leia(preco)
+			limpa()
+			se(preco <= 0){
+				escreva("Dados INVÁLIDOS!!!\n")
+			}
+		} enquanto (preco <= 0)
+		
+		
 		desc = 5/100.0 * preco
 		novo = preco - desc
+
 		escreva("\tPREÇO PROMOCIONAL\n")
 		escreva("===============================\n")
 		escreva("Preço Original: R$", preco, "\n")
 		escreva("Valor do Desconto: R$", desc, "\n")
-		escreva("Valor a Pagar: R$", novo, "\n")
+		escreva("Novo Preço: R$", novo, "\n")
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -21,7 +30,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 183; 
+ * @POSICAO-CURSOR = 284; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

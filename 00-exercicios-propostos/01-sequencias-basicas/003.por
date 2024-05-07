@@ -1,7 +1,6 @@
 programa
 {
-	inclua biblioteca Matematica --> mat
-	inclua biblioteca Texto --> txt
+	inclua biblioteca Texto --> txt
 	funcao inicio()
 	{
 		cadeia nome
@@ -9,12 +8,21 @@ programa
 		
 		escreva("Nome: ")
 		leia(nome)
-		nome = txt.caixa_alta(nome)
-		escreva("Salário: ")
-		leia(sal)
-		sal = mat.arredondar(sal, 2)
 		limpa()
-		escreva("O(A) funcionário(a) ", nome, " tem um salário de R$", sal, "\n")
+		faca{
+			escreva("Salário: ")
+			leia(sal)
+			limpa()
+			se(sal <= 0){
+				escreva("Dados INVÁLIDOS!!!\n")
+			}
+		} enquanto (sal <= 0)
+		
+		nome = txt.caixa_alta(nome)
+		escreva("DADOS DO(A) FUNCIONÁRIO(A)\n")
+		escreva("=========================\n")
+		escreva("Nome: ", nome, "\n")
+		escreva("Salário: R$", sal, "\n")
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -22,7 +30,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 336; 
+ * @POSICAO-CURSOR = 274; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

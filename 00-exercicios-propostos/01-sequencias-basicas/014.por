@@ -3,11 +3,11 @@ programa
 	
 	funcao inicio()
 	{
-		real km, pD, pK, total
+		real km, vD, vK, tot
 		inteiro dias
-
+		
 		faca{
-			escreva("Quantidade de km percorridos: ")
+			escreva("Quantidade de km percorridos pelo carro: ")
 			leia(km)
 			limpa()
 			se(km <= 0){
@@ -23,14 +23,17 @@ programa
 				escreva("Dados INVÁLIDOS!!!\n")
 			}
 		} enquanto (dias <= 0)
-		pD = dias * 90
-		pK = km * 0.2
-		total = pD + pK
-		escreva("Km = ", km, "\n")
-		escreva("Dias = ", dias, "\n")
-		escreva("Valor pelos dias = R$", pD, "\n")
-		escreva("Valor pelos km = R$", pK, "\n")
-		escreva("Valor total = R$", total, "\n")
+
+		vD = dias * 90
+		vK = km * 0.2
+		tot = vD + vK
+
+		escreva("\tLOCADORA DE CARROS\n")
+		escreva("==================================\n")
+		escreva("Valor total pelos dias: R$", vD, "\n")
+		escreva("Valor total pelos km: R$", vK, "\n")
+		escreva("Valor total: R$", tot, "\n")
+		
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -38,7 +41,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 653; 
+ * @POSICAO-CURSOR = 487; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
