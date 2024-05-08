@@ -1,6 +1,6 @@
 programa
 {
-	inclua biblioteca Texto --> txt
+	inclua biblioteca Texto --> txt
 	funcao inicio()
 	{
 		cadeia nome, porc
@@ -34,12 +34,23 @@ programa
 		}
 		senao{
 			se(anos > 3 e anos < 10){
-				
+				aum = (12.5/100) * sal
+				porc = "12.5%"
 			}
 			senao{
-				
+				aum = (20/100.0) * sal
+				porc = "20%"
 			}
 		}
+		novo = sal + aum
+		escreva("\tREAJUSTE DE SALÁRIO\n")
+		escreva("============================================\n")
+		escreva("Nome: ", nome, "\n")
+		escreva("Salário: R$", sal, "\n")
+		escreva("Qtde de anos trabalhados: ", anos, "\n")
+		escreva("Porcentagem do aumento: ", porc, "\n")
+		escreva("Valor do Aumento: R$", aum, "\n")
+		escreva("Novo Salário: R$", novo, "\n")
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -47,7 +58,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 635; 
+ * @POSICAO-CURSOR = 831; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
