@@ -1,15 +1,18 @@
 programa
 {
-	
+	inclua biblioteca Texto --> txt
 	funcao inicio()
 	{
-		inteiro vet[8], i
-
-		para(i = 0; i < 8; i++){
-			vet[i] = 999
+		cadeia nomes[7]
+		inteiro i
+		para(i = 0; i < 7; i++){
+			escreva("Nome: ")
+			leia(nomes[i])
+			limpa()
+			nomes[i] = txt.caixa_alta(nomes[i])
 		}
-		para(i = 0; i < 8; i++){
-			escreva("[", vet[i], "] ")
+		para(i = 6; i >= 0; i--){
+			escreva("[", nomes[i], "] ")
 		}
 		escreva("\n")
 	}
@@ -19,7 +22,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 175; 
+ * @POSICAO-CURSOR = 239; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

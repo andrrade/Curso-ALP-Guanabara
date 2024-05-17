@@ -3,12 +3,13 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro vet[8], i
-
-		para(i = 0; i < 8; i++){
-			vet[i] = 999
+		inteiro i, vet[10], aux
+		
+		para(i = 0; i < 10; i++){
+			vet[i] = (i + 1) * 5
 		}
-		para(i = 0; i < 8; i++){
+
+		para(i = 0; i < 10; i++){
 			escreva("[", vet[i], "] ")
 		}
 		escreva("\n")
@@ -19,7 +20,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 175; 
+ * @POSICAO-CURSOR = 199; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
